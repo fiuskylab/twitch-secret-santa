@@ -16,6 +16,8 @@ type Env struct {
 	BOT_AUTH       string
 	BOT_USERNAME   string
 	TWITCH_CHANNEL string
+	CLIENT_SECRET  string
+	CLIENT_ID      string
 }
 
 func NewCommon(l *zap.Logger) *Common {
@@ -30,6 +32,8 @@ func NewCommon(l *zap.Logger) *Common {
 			BOT_AUTH:       os.Getenv("BOT_AUTH"),
 			BOT_USERNAME:   os.Getenv("BOT_USERNAME"),
 			TWITCH_CHANNEL: os.Getenv("TWITCH_CHANNEL"),
+			CLIENT_SECRET:  os.Getenv("CLIENT_SECRET"),
+			CLIENT_ID:      os.Getenv("CLIENT_ID"),
 		},
 	}
 }
